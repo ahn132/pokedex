@@ -1,7 +1,7 @@
 import Header from "./Header.js"
 import Card from "./Card.js"
 import {database} from "./database";
-import {set, update, onValue, remove, ref} from "firebase/database";
+import {onValue, ref} from "firebase/database";
 import "./App.css"
 import {useEffect, useState} from "react";
 
@@ -51,11 +51,7 @@ function App() {
                 updateTeamList((teamList) => [...teamList, child.val()]);
             });
         })
-
-        console.log(teamList);
-
-
-    }, [firstPokemon, totalPokemon]);
+    }, [firstPokemon, totalPokemon, teamList]);
 
 
 

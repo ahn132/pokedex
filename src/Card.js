@@ -5,13 +5,11 @@ import Type from "./Type.js"
 
 function Card(props) {
     const [pokemon, setPokemon] = useState(null);
-    const [types, setTypes] = useState([]);
     useEffect(() => {
         let url = "https://pokeapi.co/api/v2/pokemon/" + props.name;
         fetch(url)
             .then((response) => (response.json()))
             .then((response) => setPokemon(response))
-            .then(() => console.log(pokemon))
     })
 
     if (pokemon == null) {
