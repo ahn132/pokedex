@@ -10,7 +10,8 @@ function Card(props) {
         fetch(url)
             .then((response) => (response.json()))
             .then((response) => setPokemon(response))
-    })
+        console.log("update");
+    }, [props.name]);
 
     if (pokemon == null) {
         return <div>Loading...</div>;

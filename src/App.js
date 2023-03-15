@@ -51,7 +51,7 @@ function App() {
                 updateTeamList((teamList) => [...teamList, child.val()]);
             });
         })
-    }, [firstPokemon, totalPokemon, teamList]);
+    }, [firstPokemon, totalPokemon]);
 
 
 
